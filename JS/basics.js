@@ -137,3 +137,46 @@ switch (expr) {
   default:
     console.log(`Sorry, we are out of ${expr}.`); 
 }
+
+
+
+//#############################################################
+//###############################################################
+
+// loop statements 
+
+let str = '';
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// expected output: "012345678"
+
+
+// while  
+let n = 0;
+
+while (n < 3) {
+  n++;
+}
+
+console.log(n);
+// expected output: 3
+
+
+// do while 
+// The do...while statement creates a loop that executes 
+// a specified statement until the test condition evaluates to false. 
+
+let result = '';
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
+// expected result: "12345"
