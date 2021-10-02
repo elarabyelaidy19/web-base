@@ -97,9 +97,16 @@ x == y // => true  coerc number to string and comapre
 // js engine coerc(auto convert) data type and compare them 
 
 3 < 2 < 1 // return true 
-(3 < 2) < 1 
-(false) < 1 // coerc false to zero  boolean => number 
+3 < 2 < 1 // evaluate 3 < 2
+false < 1 // coerc false to zero  boolean => number 
 0 < 1 // => true  
 
-// avoid auto coerc using stric equality 
-x === y 
+// avoid auto coerc using strict equality 
+x === y // => false 
+// avoid auto convert using brackets 
+3 < (2 < 1) // => false 
+
+
+//#############################################################
+//###############################################################
+
