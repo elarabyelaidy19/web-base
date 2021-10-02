@@ -91,8 +91,8 @@ var fn = "ali",
 
 // data type coercion  
 
-x = 5 
-y = "5" 
+x = 5
+y = "5"
 x == y // => true  coerc number to string and comapre 
 // js engine coerc(auto convert) data type and compare them 
 
@@ -110,3 +110,30 @@ x === y // => false
 //#############################################################
 //###############################################################
 
+// conditional statements 
+// if statement 
+let result; 
+a = 2
+if (a > 0) { 
+  result = "positive" 
+} else { 
+  result = "negative"  
+}
+
+return result;
+
+// switch statement  
+
+const expr = 'Papayas';
+switch (expr) {
+  case 'Oranges':
+    console.log('Oranges are $0.59 a pound.');
+    break;
+  case 'Mangoes':
+  case 'Papayas':
+    console.log('Mangoes and papayas are $2.79 a pound.');
+    // expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`); 
+}
