@@ -180,3 +180,23 @@ do {
 
 console.log(result);
 // expected result: "12345"
+
+
+
+//#############################################################
+//###############################################################
+
+
+// Dialogue boxes 
+// communicating with the client 
+
+// show a pop up message 
+alert("This is an alert")
+
+// getting date from the user 
+var response = prompt("enter your name", "show of message")
+
+// ask user simple type of questions  
+var action = confirm("do you want to continue")
+
+
