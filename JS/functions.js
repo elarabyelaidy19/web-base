@@ -98,3 +98,13 @@ result = test(4); // function call
 console.log(z) // => z = 40 global  
 console.log(x)  // => overwrite x with first func call 
 console.log(result);
+
+
+
+//#############################################################
+//###############################################################
+
+// how js excute code 
+// 1- hoisting (scanning) the code and set every variable called by var = undefined 
+// 2- js engine hoisting functions declared used function  
+// 3- call stack contain excution of global scope, function calls

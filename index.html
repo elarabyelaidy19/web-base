@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var z = 40; 
+    var x = 12; 
+
+    function test(y) { 
+    var z = 9; // shadwoing overwrite z 
+    console.log(z) // print 9 
+    console.log(x) // print global x 
+    x = 15;  // overwrite x
+    console.log(x) // print local x
+    var sum = y + z 
+    return sum;
+    }
+    console.log(x) // => 12 global 
+    console.log(z) // => 40 global
+    var result = test(4); // function call 
+    console.log(z) // => z = 40 global  
+    console.log(x)  // => overwrite x with first func call 
+    console.log(result);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
