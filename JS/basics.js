@@ -76,6 +76,7 @@ false && true && true && true && true  // => false
 // Checks first true 
 false || false  || false  || false  || true // => true 
 0 || false || "" || undefined || 2 // => return 2  
+
 // FALSY VALUES 
 // 0, null, undefined, "" 
 
