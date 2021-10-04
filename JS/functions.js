@@ -76,7 +76,7 @@ console.log(result);
 // shadwoing var without var will override the global scope
 // global variables defined outside functions  
 // local scope within the fun defenition 
-// onc we create varibale without var in local scope and call it in global will be visible(global) at first call to the fun only  
+// onc we create varibale without var in local scope and call it in global will be visible(global) after first func call 
 // 
 
 console.log("<br>")
