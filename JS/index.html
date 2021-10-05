@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    
+    try { 
+      var result = parseInt(prompt("enter your number between 10 and 20", "15")); 
+      if (result < 10)
+        throw "less than expected";
+      else if (result > 20) 
+        throw new RangeError ("out of range"); 
+      else 
+        alert("value within accepted range");
+    
+      console.log("inside try")  
+
+    } catch(e) { // work only if there is an error within try block
+      
+      if (e instanceof RangeError) { 
+        console.log("this is range error");
+        console.log(e.name); 
+        console.log(e.message); 
+      } 
+      else if (e=="less than expected") {  
+        console.log("low value")
+      }
+      // console.logg("type error")
+      console.log("catched error");
+    } finally {  // work if there is error at both try and catch
+      // any code outside finally will never work 
+      console.log("done") 
+    }
+    // any code outside finally will never work 
+    console.log("i will never work if there is error in catch and try")
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
