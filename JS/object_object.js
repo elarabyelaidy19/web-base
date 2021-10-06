@@ -74,14 +74,61 @@ obj.disply = function() {
 // calling 
 obj.disply();
 
-// creaying custom object and assign gives it properities
+// creating custom object and assign gives it properities
 var customObj = { 
   name: 'ali', 
   loc: "cairo", 
   age: 15, 
   info: function() { 
+    // this refer to the current object
     return "This is " + this.name + " from " + this.loc + " age " + this.age;
   }
 }
 
-customObj.info(); // calling properities
+customObj.info(); // calling properities 
+
+
+//#############################################################
+//###############################################################
+
+// creating Object by Factory  
+// factory method refer to a function we can use to create multible object with common prop 
+
+// Factory Method
+function employee(nme, sal, dep) { 
+  
+  return { 
+    empName: nme, 
+    empSal: sal, 
+    empDep: dep, 
+    info: function() { 
+      return this.empName +" works in deartment "+ this.empDep + " and salaray " + this.empSal; 
+    }
+
+  }
+}
+
+var emp = employee("ali", 5000, "SD") 
+emp.empName // pro 
+emp.empSal // pro 
+emp.info() // func
+
+var emp2 = employee("ahmed", 5455, "DE") 
+
+
+// Constructor 
+// declared with upcase in beg 
+
+function Employee(name, sal, dept) { 
+
+  this.empName = name; 
+  this.empDep = dept; 
+  this.empSal = sal;
+}
+
+// constructor declared using new otherwise the constructor has no return value so it will  return undefined 
+var em = new Employee("ali", 5000, "DS");
+
+
+
+
