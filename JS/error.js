@@ -69,3 +69,35 @@ try {
 // any code outside finally will never work 
 console.log("i will never work if there is error in catch and try")
 
+
+
+
+//#############################################################
+//###############################################################
+
+// on error 
+onerror = errorHandle; 
+
+    function errorHandle(msg,url,l,col,err) { 
+      console.log(msg);
+      console.log(url); 
+      console.log(l); 
+      return false; // error messge will not show in browser
+    }
+
+
+    var result = parseInt(prompt("enter your number between 10 and 20", "15")); 
+    if (result < 10) // if value less than 10
+      throw "less than expected";  // this will throw error and goes to catch
+    else if (result > 20) 
+      throw new RangeError ("out of range"); 
+    else 
+      alert("value within accepted range");
+
+    
+    console.log("inside try")    
+    console.log("this is range error");
+
+
+    // any code outside finally will never work 
+    console.log("done")
