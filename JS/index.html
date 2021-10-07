@@ -8,16 +8,23 @@
 
   <script>
         
-    var fun = function() { 
-      // return (arguments[2] + arguments[4]); 
-      sum = 0;
-      for (var i = 0; i < arguments.length; i++) { 
-        sum += arguments[i]
+    var b = 10 
+
+    function outerFun(x, y) { 
+      var z = 10 
+      var a = 1 
+
+      var innerFun = function (a, b) {  
+        var w = 20 
+        return x + y + z + a + b + w
       }
-      return sum;
+      return innerFun;
     }
 
-    console.log(fun(1,2,3,4, 6));
+    var result = outerFun(5,6); 
+    console.log(result); 
+
+    console.log(result(4,3));
 
   </script>
 </head>
