@@ -51,7 +51,7 @@ result();
 //#############################################################
 //###############################################################
 
-// Cretaion of oibject Object 
+// Cretaion of object Object 
 // constructor  
 
 var obj = new Object(); 
@@ -130,5 +130,36 @@ function Employee(name, sal, dept) {
 var em = new Employee("ali", 5000, "DS");
 
 
+//#############################################################
+//###############################################################
+
+// Object object Method
+// instance method
+em.hasOwnProperty("empName");  // return true if has the 
 
 
+// static methods
+// calls by parent Object itself 
+Object.keys(em); 
+// return properties names
+Object.values(em);
+// return values 
+
+delete em.empName;
+// deletes empName prop
+
+ // i == key, em[i] values
+for (var i in em) { 
+  console.log(i+" : "+em[i]);
+}
+
+
+
+//#############################################################
+//###############################################################
+
+
+// Data descriptor 
+// Accessor Descriptor 
+
+Object.defineProperty()
