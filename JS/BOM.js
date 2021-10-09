@@ -103,4 +103,49 @@ history.back();
 // go one page backword  
 
 history.go(n); 
-// go to n visited page
+// go to n visited page 
+
+
+//#############################################################
+//############################################################### 
+
+// Location Object 
+// dealing with the info infered from Urls
+// url, protocol, queryString, HostName 
+
+// prop 
+location.href(); 
+// return Url 
+location.protocol(); 
+// protocol 
+location.hostname(); 
+// hostname
+location.port(); 
+// listener port 
+location.search(); 
+// return the query string 
+
+
+// Methods 
+
+location.replace(); // take complete Url
+// replace pages with same length of storage 
+
+location.assign() // take url 
+// navigate to url and cancle forowrd history push url after and cancle forowrd to next page history.length increse 
+
+location.replace() 
+// refresh the page 
+
+
+//#############################################################
+//############################################################### 
+
+// Navigator Object 
+// concerned of all information about the browser
+
+navigator.language();
+navigator.cookieEnabled();
+navigator.userAgent();
+// .........
+// and so on
