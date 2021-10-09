@@ -149,3 +149,15 @@ navigator.cookieEnabled();
 navigator.userAgent();
 // .........
 // and so on
+
+
+//#############################################################
+//############################################################### 
+
+// Document Object 
+// Part of the browser object model  
+// DOM defer from standard DOM   
+// access and maniuplating html objects
+// Dom contain SDOM and additional info of BOM  
+
+// https://maharatech.gov.eg/mod/resource/view.php?id=7706&forceview=1
