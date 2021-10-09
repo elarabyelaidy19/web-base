@@ -5,7 +5,7 @@
 
 // Function Creation
 // 1- Fuction statement
-//parced once 
+//parsed once 
 
 // 2- Annonymus Function 
 // parsed once 

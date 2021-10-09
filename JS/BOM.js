@@ -11,7 +11,7 @@
 
 // Window Object properties 
 
-// 1- Open fun 
+// 1- Open prop
 // win var capture the returned object from calling open fun
 var win;
 function openNewWin() { 
@@ -19,7 +19,7 @@ function openNewWin() {
 
 } 
 
-// 2- Close fun 
+// 2- Close prop
 // work on the gloal object (Window object) 
 // insted we call it on the child created from the open fun
 function closeWin() { 
@@ -27,14 +27,14 @@ function closeWin() {
 }
 
 
-// 3- focus fun
+// 3- focus prop
 // make the change in the parent window (at same page)
 function changeBkg() { 
   win.document.bgColor = "red"; 
   win.focus();
 }
 
-// 4 -moveBy 
+// 4 -moveBy prop
 // move by shift by given coor
 function mo() { 
   win.moveBy(50, 50); 
@@ -47,3 +47,60 @@ function mov() {
   win.focus();
 }
 
+
+//#############################################################
+//############################################################### 
+
+// Window Object Methods 
+
+// setInterval 
+// setInterval(callback fn, duration) in milliseconds
+// works one time after every interval of time
+var timerId
+function startAlert() { 
+  timerId = setInterval(function(){
+    alert("Time interval");
+  }, 2000);
+}
+
+// claerInterval
+
+function endAlert() { 
+  clearInterval(timerId)
+}
+// setTimeout 
+// works one time after the interval 
+var timerId
+function startAlert() { 
+  timerId = setTimeout(function(){
+    alert("Time interval");
+  }, 2000);
+}
+
+// clearTimeout
+
+
+function endAlert() { 
+  clearTimeout(timerId);
+}
+
+//#############################################################
+//############################################################### 
+
+// History
+// history object refer to the history of the same opend tap (tab now) 
+
+// prop 
+history.length();
+// return nums of visited pages(urls) on the same tab 
+
+
+// Methods 
+history.forward(); 
+// go one page forowrd
+
+history.back(); 
+// go one page backword  
+
+history.go(n); 
+// go to n visited page
