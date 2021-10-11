@@ -105,6 +105,8 @@ cookie = "username=ali;epires=122332"
  //=> 12
 cookie.subString(0,18)
 
+https://maharatech.gov.eg/mod/resource/view.php?id=7707&forceview=1 
+
 //#############################################################
 //###############################################################
 
