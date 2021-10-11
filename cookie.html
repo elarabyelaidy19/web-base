@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+    <script> 
+    
+    function saveInfo() { 
+      var date = new Date();
+      date.setDate(date.getMonth() + 3);
+      var val = document.getElementById("usrnm").value;
+      var val2 = document.getElementById("mail").vlaue;
+
+      // document.cookie = "usernameCookie = " +val+";expires = "+date; 
+      document.cookie = "userEmailCookie = " +val2+";expires = "+date;
+    }
+
+    </script>
+<body>
+  <input type="text" placeholder="enter your name" id="usrnm" name="username"><br>
+  <input type="email" placeholder="enter your mail" id="mail" name="userEmail"> 
+  <button id="btn" onclick="saveInfo()">Save Info</button>
+</body>
+</html>
