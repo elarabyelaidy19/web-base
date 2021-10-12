@@ -26,4 +26,47 @@ function changImg() {
 // when mouse move out image return to its default 
 function setOrigi() { 
   document.images[0].src = "img/1.jpeg" 
-}
+} 
+
+// Mouse Events Slide Shwo 
+
+
+//#############################################################
+//############################################################### 
+
+// FORM EVENTS
+// onsubmit 
+// onreset 
+document.forms[0].onsubmit = function() { 
+  alert("Iam an form submit");
+} 
+
+
+// onfocus 
+// when focusing on forms select the content of the form
+onfocus="select()"
+// onblur  
+// when moving out of the form set the value nothing
+onblur = "this.value='nothing'"
+
+
+
+//#############################################################
+//############################################################### 
+
+// disply selected options from dropdownlist
+// DROPDOWNLIST  
+// prop 
+// 1 - length 
+// 2 - selectindex
+// 3- options 
+
+
+//#############################################################
+//############################################################### 
+
+// this keyword
+// event handler
+// Capturing and bublling
+// addEventListener (caputring 
+// Custom Event
