@@ -16,24 +16,36 @@
     <script> 
 
 
-      document.getElementById("btn").addEventListener("click", function() { 
+document.getElementById("btn").addEventListener("click", function() { 
         
      
-      var xhr = new XMLHttpRequest();
-      var txt= ""
-      xhr.onreadystatechange = function() { 
-
-        if (xhr.readyState==4) { 
-          if (xhr.status==200) { 
-            txt = xhr.responseText;
-            document.getElementsByTagName("div")[0].innerHTML = txt;
+        var xhr = new XMLHttpRequest();
+      
+        var jsObj, jsonObj;
+        xhr.onreadystatechange = function() { 
+      
+          if (xhr.readyState==4) { 
+            if (xhr.status==200) { 
+              // assign the the text response in jsonObj 
+              // parse jsonObj to jsObj 
+              jsObj = JSON.parse(xhr.responseText);
+              
+              console.log(jsObj); 
+              displayFormat(jsObj);
+      
+              // ascess value of js obj
+            }
           }
         }
+        xhr.open("GET","json.json"); 
+        xhr.send("");  
+      
+      })
+      
+      function displayFormat(obj) { 
+          
+        document.getElementsByTagName("div")[0].innerHTML = obj[2].color;
       }
-      xhr.open("GET","simple.txt"); 
-      xhr.send(""); 
-
-      });
 
     </script>
     </body>

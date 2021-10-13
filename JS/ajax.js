@@ -57,6 +57,7 @@ document.getElementById("btn").addEventListener("click", function() {
     // if response complete successfully save it in txt 
     if (xhr.readyState==4) { 
       if (xhr.status==200) { 
+        // read the response text and assign it to txt
         txt = xhr.responseText; 
         // find the first div tag and put txt content in it 
         document.getElementsByTagName("div")[0].innerHTML = txt;
@@ -66,3 +67,85 @@ document.getElementById("btn").addEventListener("click", function() {
   xhr.open("GET","simple.txt"); 
   xhr.send("");  
 });
+
+
+
+
+//#############################################################
+//############################################################### 
+
+// validator jsonlint.com
+// json 
+
+//  JSON FUNCTIONS 
+
+// json.parse() 
+// convert json file into JS Object
+
+// json.stringfy 
+// convert js objects into  json file 
+
+
+// maniuplate json 
+
+
+document.getElementById("btn").addEventListener("click", function() { 
+        
+     
+  var xhr = new XMLHttpRequest();
+  var txt= "" 
+  var jsObj, jsonObj;
+  xhr.onreadystatechange = function() { 
+
+    if (xhr.readyState==4) { 
+      if (xhr.status==200) { 
+        // assign the the text response in jsonObj 
+        jsonObj = xhr.responseText;  
+        // parse jsonObj to jsObj 
+        jsObj = JSON.parse(jsonObj);
+        
+        console.log(jsObj); 
+
+        // ascess value of js obj
+       document.getElementsByTagName("div")[0].innerHTML = jsObj[2].color;
+      }
+    }
+  }
+  xhr.open("GET","json.json"); 
+  xhr.send("");  
+}) 
+
+
+// REFACTORING  
+
+
+document.getElementById("btn").addEventListener("click", function() { 
+        
+     
+  var xhr = new XMLHttpRequest();
+
+  var jsObj, jsonObj;
+  xhr.onreadystatechange = function() { 
+
+    if (xhr.readyState==4) { 
+      if (xhr.status==200) { 
+        // assign the the text response in jsonObj 
+        // parse jsonObj to jsObj 
+        jsObj = JSON.parse(xhr.responseText);
+        
+        console.log(jsObj); 
+        displayFormat(jsObj);
+
+        // ascess value of js obj
+      }
+    }
+  }
+  xhr.open("GET","json.json"); 
+  xhr.send("");  
+
+})
+
+function displayFormat(obj) { 
+    
+  document.getElementsByTagName("div")[0].innerHTML = obj[2].color;
+}
