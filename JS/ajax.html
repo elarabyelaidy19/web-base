@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+     
+
+  <body>
+    <div></div>  
+    <input type="button" id="btn" value="get text"> 
+    
+    <script> 
+
+
+      document.getElementById("btn").addEventListener("click", function() { 
+        
+     
+      var xhr = new XMLHttpRequest();
+      var txt= ""
+      xhr.onreadystatechange = function() { 
+
+        if (xhr.readyState==4) { 
+          if (xhr.status==200) { 
+            txt = xhr.responseText;
+            document.getElementsByTagName("div")[0].innerHTML = txt;
+          }
+        }
+      }
+      xhr.open("GET","simple.txt"); 
+      xhr.send(""); 
+
+      });
+
+    </script>
+    </body>
+</html> 
