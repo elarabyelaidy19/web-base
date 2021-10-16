@@ -117,6 +117,16 @@ var emp = new Emplyee("ali", 23, 2222, 'CSE');
 // we avoid set undefined value by setting default values 
 
 
+// function Overloading occurs when one or more than method within the same class  
+// have the same name but diffrent params count (types and nums of params )
+
+
+
+//#############################################################
+//###############################################################
+
+
+
 
 //#############################################################
 //###############################################################
