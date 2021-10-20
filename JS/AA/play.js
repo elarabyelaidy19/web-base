@@ -20,5 +20,55 @@ NBAPlayer.prototype
 curry.name = "steph" 
 curry.name // steph
 
-curry.dunk(); // steph dunk! 
+curry.dunk(); // steph dunk!   
+
+
+function style(a,b) { 
+  return a+b;
+} 
+
+var expression = function(a,b) { 
+  return a+b;
+}
+
+var fastArrow = (a,b) => { 
+  return a+b;
+}
+// 
+function isEven(n) { 
+  if(n%2==0) { 
+    console.log(n+" is even");
+  }
+}
+
+function forEach(a, cb) { 
+  for (var i=0; i<a.length; i++) { 
+    cb(a[i]);
+  }
+}
+
+forEach([1,2,3,4,5], isEven);
+
+////// 
+
+[1,2,3,4,5].forEach(function(n) { 
+  if(n%2==0) {
+     console.log(n);
+  }
+})
+
+// closures as implicit passing 
+
+function plindrome(string) { 
+  function reverse() { 
+    return string.split('').reverse().join('');
+  }
+  return reverse() == string;
+}
+
+
+// private states 
+ 
+
+
 
