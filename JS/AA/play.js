@@ -71,4 +71,54 @@ function plindrome(string) {
  
 
 
+// Constructor  
+
+function kitten(name, age) { 
+  this.name = name; 
+  this.age = age; 
+
+  this.mew = function() { 
+    console.log(this.name+" Say hello");
+  };
+}
+
+var con = new kitten("kitty", 4);
+con.name; 
+con.mew(); 
+
+
+// function prototype 
+
+function kitten(name, age) { 
+  this.name = name; 
+  this.age = age; 
+}
+
+kitten.prototype.mew = function() { 
+  console.log(this.name+" say hello"+"my age is"+ this.age); 
+}
+
+c1 = new kitten("kitty", 2); 
+c2 = new kitten("boos", 2);  
+
+
+// 
+function isSubstring(searchString, subString) { 
+    return searchString.includes(subString);
+}
+
+
+// FizzBuzz 
+
+var fizzBuzz = function(arr) { 
+  div = [];  
+  for(var i = 0; i <arr.length; i++) { 
+    if(arr[i] % 3 === 0 && arr[i] % 5===0) {
+      continue;
+    } else if (arr[i] % 3 === 0 || arr[i] % 5===0) { 
+      div.push(arr[i]); 
+    }
+  }  
+  return div; 
+} 
 
