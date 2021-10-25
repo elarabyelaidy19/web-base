@@ -136,13 +136,18 @@ var isPrime = function(n) {
 
 
 var sumOfPrimes = function(n) { 
-  sum = 0; 
-  
-  for(var i = 2; i<=n; i++) { 
-    if(isPrime(i)) 
-      sum += i 
-  }
-  return sum; 
+  var sum = 0;  
+  var counter = 0;
+  var i = 2;
+
+  while (n>counter) { 
+    if(isPrime(i)) {
+      counter += 1; 
+      sum += i; 
+    } 
+    i++;
+  } 
+  return sum
 
 }
 
