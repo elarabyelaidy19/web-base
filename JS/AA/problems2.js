@@ -47,3 +47,21 @@ Elephant.pradeHelper = function(ele) {
 }
 
 herd.forEach(Elephant.pradeHelper); 
+
+
+// and dinner 
+
+function dinnerBreakfast() { 
+    order = "I'd like cheesy scrambled eggs and bacon"; 
+
+    function addToDinner(item) { 
+        order = `${order} and ${item} please!` 
+        console.log(order); 
+    }
+
+    return addToDinner;
+}
+
+var breakfast = dinnerBreakfast(); 
+breakfast('kookies'); 
+breakfast('dinner');

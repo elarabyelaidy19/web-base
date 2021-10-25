@@ -6,14 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-       var titlize = (names, callBack) => { 
-    var newName = names.map (name => `Mx. ${name} Jingleheimer Schmidt`); 
-    callBack(newName); 
-}
+            
+      function dinnerBreakfast() { 
+          order = "I'd like cheesy scrambled eggs and bacon"; 
 
-var printNames = (names) => { 
-    names.forEach(name => console.log(name));
-}
+          function addToDinner(item) { 
+              order = `${order} and ${item} please!` 
+              console.log(order); 
+          }
+
+          return addToDinner;
+      }
+
+      var breakfast = dinnerBreakfast(); 
+      breakfast('kookies'); 
+      breakfast('dinner');
   </script>
 </head>
 <body>
