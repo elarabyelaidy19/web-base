@@ -6,22 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-        function sum(nums) {
-      let count = 0;
+       var titlize = (names, callBack) => { 
+    var newName = names.map (name => `Mx. ${name} Jingleheimer Schmidt`); 
+    callBack(newName); 
+}
 
-      function addNum(num) {
-        count += num;
-      }
-
-      for (let i = 0; i < nums.length; i++){
-        addNum(nums[i]);
-      }
-
-      return count;
-      }
-
-      sum([1,3,5]);
-
+var printNames = (names) => { 
+    names.forEach(name => console.log(name));
+}
   </script>
 </head>
 <body>
