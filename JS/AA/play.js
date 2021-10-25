@@ -122,3 +122,27 @@ var fizzBuzz = function(arr) {
   return div; 
 } 
 
+
+// isPrime 
+
+var isPrime = function(n) {    
+  for(var i = 2; i**2<= n; i++) { 
+    if(n%i==0) { 
+      return false
+    }
+  }
+  return true;  
+}  
+
+
+var sumOfPrimes = function(n) { 
+  sum = 0; 
+  
+  for(var i = 2; i<=n; i++) { 
+    if(isPrime(i)) 
+      sum += i 
+  }
+  return sum; 
+
+}
+
